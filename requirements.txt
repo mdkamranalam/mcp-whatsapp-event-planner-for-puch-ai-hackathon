@@ -1,0 +1,6 @@
+fastmcp
+aiohttp
+python-dateutil
+python-dotenv
+twilio
+pydantic
