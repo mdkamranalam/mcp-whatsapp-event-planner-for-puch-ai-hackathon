@@ -49,8 +49,13 @@ cp .env.example .env
 Then edit `.env` and add your details:
 
 ```env
-AUTH_TOKEN=your_secret_token_here
-MY_NUMBER=919876543210
+AUTH_TOKEN="<your_auth_token_here>"
+MY_NUMBER="<your_phone_number_here>"
+ENV="DEVELOPMENT or PRODUCTION"
+TWILIO_ACCOUNT_SID="<your_twilio_account_sid_here>"
+TWILIO_AUTH_TOKEN="<your_twilio_auth_token_here>"
+TWILIO_WHATSAPP_FROM="whatsapp:<your_twilio_whatsapp_from_number_here>"
+TWILIO_WHATSAPP_TO="whatsapp:+<your_phone_number_here>"
 ```
 
 **Important Notes:**
@@ -108,6 +113,13 @@ To get more detailed error messages:
 
 ```
 /mcp diagnostics-level debug
+```
+
+## Usage Guide
+Interact with the bot by sending WhatsApp messages with the following commands to the bot number:
+1. **Create an Event**
+```bash
+/create_event Title;YYYY-MM-DD HH:MM;Location;Description;whatsapp:+111,whatsapp:+222
 ```
 
 ## Customizing the Starter
